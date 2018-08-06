@@ -1,0 +1,18 @@
+<h1>Games#new</h1>
+<p>Find me in app/views/games/new.html.erb</p>
+<ul class="list-inline">
+  <% @grid.each do |letter| %>
+  <li><%= letter %></li>
+  <% end %>
+</ul>
+
+
+
+<%= form_tag("/games/score") do %>
+  <%= label_tag(:userGuess, "Submit Guess") %>
+  <%= text_field_tag(:userGuess) %>
+  <%= hidden_field_tag(:grid, @grid.join) %>
+  <%= submit_tag("Guess") %>
+<% end %>
+
+

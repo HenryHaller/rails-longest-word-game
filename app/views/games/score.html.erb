@@ -1,0 +1,12 @@
+<h1>Games#score</h1>
+<p>Find me in app/views/games/score.html.erb</p>
+<p>Your Guess: <%= @userGuess %></p>
+<p>The Grid Was:</p>
+<p>
+  <ul class="list-inline">
+    <% @grid.each do |letter| %>
+      <li><%= letter %></li>
+    <% end %>
+  </ul>
+</p>
+<p>Result: <%= @result %></p>
